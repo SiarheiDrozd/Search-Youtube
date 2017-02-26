@@ -1,0 +1,65 @@
+const ComponentConstants = {
+    SEARCH_FORM_ID               : "searchForm",
+    SEARCH_FORM_NAME             : "youtubeSearch",
+    SEARCH_FORM_CLASSES          : ["youtube-search", "shadow-box"],
+    SEARCH_FORM_INPUT_ID         : "searchField",
+    SEARCH_FORM_INPUT_PLACEHOLDER: "Got video?",
+    SEARCH_FORM_INPUT_TYPE       : "text",
+    SEARCH_FORM_INPUT_CLASSES    : ["search-input"],
+    SEARCH_FORM_SUBMIT_ID        : "searchButton",
+    SEARCH_FORM_SUBMIT_TYPE      : "button",
+    SEARCH_FORM_SUBMIT_CONTENT   : "<i class='fa fa-search' aria-hidden='true'></i>",
+    SEARCH_FORM_SUBMIT_CLASSES   : ["search-button", "button"],
+
+    RESULTS_LIST_ID              : "resultsList",
+    RESULTS_LIST_CLASSES         : ["results-list"],
+    RESULTS_LIST_WRAPPER_ID      : "resultsListWrapper",
+    RESULTS_LIST_WRAPPER_CLASSES : ["results-list-wrapper"],
+    RESULTS_LIST_SECTION_ID      : "searchResult",
+    RESULTS_LIST_SECTION_CLASSES : ["search-result"],
+    RESULTS_LIST_SWIPE_TRANSITION: "all .75s",
+
+    LOADED_VIDEO_ELEMENT_CLASSES                 : ["loaded-video", "shadow-box"],
+    LOADED_VIDEO_ELEMENT_PREVIEW_IMAGE_CLASSES   : ["loaded-video-image"],
+    LOADED_VIDEO_ELEMENT_PREVIEW_IMAGE_ALT       : "video from youtube",
+    LOADED_VIDEO_ELEMENT_DESCRIPTION_CLASSES     : ["loaded-video-description"],
+    LOADED_VIDEO_ELEMENT_TITLE_CLASSES           : ["loaded-video-title"],
+    LOADED_VIDEO_ELEMENT_AUTHOR_CLASSES          : ["loaded-video-author"],
+    LOADED_VIDEO_ELEMENT_DATE_CLASSES            : ["loaded-video-date"],
+    LOADED_VIDEO_ELEMENT_VIEWS_CLASSES           : ["loaded-video-views"],
+    LOADED_VIDEO_ELEMENT_LIKES_CLASSES           : ["loaded-video-likes"],
+    LOADED_VIDEO_ELEMENT_DESCRIPTION_TEXT_CLASSES: ["loaded-video-description-text"],
+    LOADED_VIDEO_ELEMENT_LINK_CLASSES            : ["loaded-video-link"],
+    LOADED_VIDEO_ELEMENT_LINK_VALUE              : "https://www.youtube.com/watch?v=",
+
+    PAGING_NAV_MENU_ID                    : "pagingNav",
+    PAGING_NAV_MENU_CLASSES               : ["paging-nav-menu"],
+    PAGING_LIST_ID                        : "pagingList",
+    PAGING_LIST_CLASSES                   : ["paging-list"],
+    PAGING_LIST_ELEMENT_CLASSES           : ["paging-element", "button", "shadow-box"],
+    PAGING_LIST_ELEMENT_BASE_ID           : "page_",
+    PAGING_LIST_ELEMENT_TOOLTIP_CLASSES   : ["tooltip-text", "shadow-box"],
+    PAGING_LIST_MORE_BUTTONS_LAYER_ID     : "moreButtonsLayer",
+    PAGING_LIST_MORE_BUTTONS_LAYER_CLASSES: ["more-buttons-layer"],
+    PAGING_LIST_MORE_BUTTON_ID            : "moreButton",
+    PAGING_LIST_MORE_BUTTON_CLASSES       : ["paging-element", "button", "more-elements-button"],
+
+    CLASS_GRAB        : "grab",
+    CLASS_GRABBING    : "grabbing",
+    CLASS_ACTIVE_PAGE : "active-page",
+    CLASS_VISIBLE     : "visible",
+    DEFAULT_TRANSITION: "none",
+
+};
+const ControllerConstants = {
+    DEFAULT_YOUTUBE_API_KEY : "AIzaSyANmZGDXx-mEpLIFnmtFMbwzbEreSJhgfQ",
+    DEFAULT_VIDEO_LOAD_COUNT: 15,
+    DEFAULT_RESULT_WIDTH    : 322,
+    DEFAULT_RESULT_MARGIN   : 15,
+    DEFAULT_PAGE_SWAP_COUNT : 1,
+};
+
+export {
+    ComponentConstants,
+    ControllerConstants,
+};
