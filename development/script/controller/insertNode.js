@@ -16,11 +16,9 @@ function calculateMargin() {
 export default function (parentNode, insertingNode) {
     if (globalVariables.loadedVideosCount % globalVariables.loadedVideosDisplayCount === 0) {
         insertingNode.style.marginRight = calculateMargin();
-        console.log(parentNode.getBoundingClientRect().width);
     }
     if ((globalVariables.loadedVideosCount - 1) % globalVariables.loadedVideosDisplayCount === 0) {
         insertingNode.style.marginLeft = calculateMargin();
-        console.log(parentNode.getBoundingClientRect().width);
     }
     parentNode.appendChild(insertingNode);
 }
