@@ -15,8 +15,8 @@ export default function () {
     list.setAttribute("id", `${ComponentConstants.RESULTS_LIST_ID}`);
     list.classList.add(...ComponentConstants.RESULTS_LIST_CLASSES);
 
-    document.body.appendChild(main);
     main.appendChild(section);
     section.appendChild(wrapper);
     wrapper.appendChild(list);
+    document.body.appendChild(main);
 }

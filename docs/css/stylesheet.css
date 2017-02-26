@@ -92,7 +92,6 @@ ul {
 
 .loaded-video span {
     display: block;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 0 5px;
@@ -110,10 +109,15 @@ ul {
     text-shadow: 0 0 2px #8c8c8c;
 }
 
+.loaded-video-author {
+    white-space: nowrap;
+}
+
 .loaded-video-title {
     position: relative;
     margin-top: -1.5rem;
     height: 1.5rem;
+    white-space: nowrap;
     background: rgba(255, 255, 255, 0.75);
 }
 
@@ -204,4 +208,18 @@ ul {
     -moz-user-select: none;
     cursor: -webkit-grabbing;
     cursor: -moz-grabbing;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
 }

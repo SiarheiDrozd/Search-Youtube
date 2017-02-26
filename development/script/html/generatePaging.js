@@ -5,6 +5,7 @@ import setActivePage from "../controller/setActivePage";
 
 export default function () {
     const PAGING_LIST = document.querySelector(`#${ComponentConstants.PAGING_LIST_ID}`);
+    const LIST = document.querySelector(`#${ComponentConstants.RESULTS_LIST_ID}`);
     while (PAGING_LIST.firstChild) {
         PAGING_LIST.removeChild(PAGING_LIST.firstChild);
     }
@@ -30,5 +31,7 @@ export default function () {
             PAGING_LIST.appendChild(createPageButton(i));
         }
     }
+    LIST.style.width = globalVariables.pagesCount  * document.documentElement.clientWidth + "px";
+
     setActivePage();
 }

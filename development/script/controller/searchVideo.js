@@ -21,14 +21,14 @@ function searchVideo(event) {
         .then((result) => result.json())
         .then((data) => processResult(data, event))
         .catch(function (error) {
-            console.log("Request failed 2", error);
+            console.log("Request failed, ", error);
         });
 }
 
 function processResult(data, event) {
     globalVariables.nextPageToken = data.nextPageToken;
     let resultVideos = data.items;
-    let parentToInsert = document.querySelector(`#${ComponentConstants.RESULTS_LIST_ID}`);
+    let parentToInsert = document.getElementById(`${ComponentConstants.RESULTS_LIST_ID}`);
 
     if (event) {
         while (parentToInsert.firstChild) {
