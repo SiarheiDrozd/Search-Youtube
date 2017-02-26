@@ -20,7 +20,7 @@ function updateMargins() {
         changePage(targetPageIndex);
         generatePagingList();
     }
-    LIST.style.transform = `translate3d(${-globalVariables.currentPageIndex * document.documentElement.clientWidth}px, 0, 0)`;
+    LIST.style.transform = `translate(${-globalVariables.currentPageIndex * document.documentElement.clientWidth}px, 0)`;
 
     const NEW_SIDE_MARGIN_SIZE = (document.documentElement.clientWidth
                                     - (globalVariables.loadedVideosDisplayCount

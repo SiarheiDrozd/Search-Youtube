@@ -6,7 +6,7 @@ import changePage from "./changePage";
 const mouseDown = function (event) {
     const SEARCH_RESULT_LIST = document.querySelector(`#${ComponentConstants.RESULTS_LIST_ID}`);
     globalVariables.mouseDownPosX = event.clientX || event.changedTouches[0].pageX;
-    globalVariables.layerPosition = SEARCH_RESULT_LIST.offsetLeft;
+    globalVariables.layerPosition = SEARCH_RESULT_LIST.getBoundingClientRect().left;
     globalVariables.isMouseDown = true;
     event.target.parentNode.classList.add(ComponentConstants.CLASS_GRAB);
 };
@@ -23,7 +23,7 @@ const mouseUp = function (event) {
 
             if (globalVariables.currentPageIndex === 0) {
                 // first page
-                LIST.style.marginLeft = 0;
+                LIST.style.transform = `translate(0, 0)`;
             } else {
                 //swap left
                 changePage(globalVariables.currentPageIndex - ControllerConstants.DEFAULT_PAGE_SWAP_COUNT);

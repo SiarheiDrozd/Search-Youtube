@@ -37,7 +37,7 @@ export default function (targetPageIndex) {
         if (LIST.style.transition !== ComponentConstants.RESULTS_LIST_SWIPE_TRANSITION) {
             LIST.style.transition = ComponentConstants.RESULTS_LIST_SWIPE_TRANSITION;
         }
-        LIST.style.transform = `translate3d(${-(targetPageIndex * document.documentElement.clientWidth)}px, 0, 0)`;
+        LIST.style.transform = `translate(${-(targetPageIndex * document.documentElement.clientWidth)}px, 0)`;
         globalVariables.currentPageIndex = targetPageIndex;
         setActivePage();
     }

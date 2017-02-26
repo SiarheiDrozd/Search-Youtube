@@ -21,7 +21,7 @@ function searchVideo(event) {
         .then((result) => result.json())
         .then((data) => processResult(data, event))
         .catch(function (error) {
-            console.log("Request failed", error);
+            console.log("Request failed 2", error);
         });
 }
 

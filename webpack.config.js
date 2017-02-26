@@ -23,7 +23,7 @@ module.exports = {
     watch: true,
 
     watchOptions: {
-        aggregateTimeout: 100,
+        aggregateTimeout: 250,
     },
 
     devtool: NODE_ENV === "development" ? "source-map" : null,
@@ -34,9 +34,9 @@ module.exports = {
         }),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
-                warnings: false,
+                // warnings: false,
                 //drop_console: true,
-                unsafe: true,
+                // unsafe: true,
             }
         })
     ],
