@@ -4,11 +4,16 @@ import searchVideo from "./searchVideo";
 import changePage from "./changePage";
 
 const mouseDown = function (event) {
-    const SEARCH_RESULT_LIST = document.querySelector(`#${ComponentConstants.RESULTS_LIST_ID}`);
-    globalVariables.mouseDownPosX = event.clientX || event.changedTouches[0].pageX;
-    globalVariables.layerPosition = SEARCH_RESULT_LIST.getBoundingClientRect().left;
-    globalVariables.isMouseDown = true;
-    event.target.parentNode.classList.add(ComponentConstants.CLASS_GRAB);
+    console.log(event.target);
+    if(event.target === document.getElementById(`${ComponentConstants.PAGING_LIST_MORE_BUTTONS_LAYER_ID}`)) {
+        event.stopPropagation();
+    } else {
+        const SEARCH_RESULT_LIST = document.querySelector(`#${ComponentConstants.RESULTS_LIST_ID}`);
+        globalVariables.mouseDownPosX = event.clientX || event.changedTouches[0].pageX;
+        globalVariables.layerPosition = SEARCH_RESULT_LIST.getBoundingClientRect().left;
+        globalVariables.isMouseDown = true;
+        event.target.parentNode.classList.add(ComponentConstants.CLASS_GRAB);
+    }
 };
 
 const mouseUp = function (event) {

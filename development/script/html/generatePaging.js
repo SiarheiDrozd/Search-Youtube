@@ -15,6 +15,8 @@ export default function () {
     moreButtonsLayer.classList.add(...ComponentConstants.PAGING_LIST_MORE_BUTTONS_LAYER_CLASSES);
     moreButtonsLayer.setAttribute("id", `${ComponentConstants.PAGING_LIST_MORE_BUTTONS_LAYER_ID}`);
 
+    PAGING_LIST.appendChild(moreButtonsLayer);
+
     for (let i = 0; i < globalVariables.pagesCount; i++) {
         if (globalVariables.pagesCount > 7 && i > 2 && i < (globalVariables.pagesCount - 3)) {
             if (!PAGING_LIST.querySelector(`#${ComponentConstants.PAGING_LIST_MORE_BUTTON_ID}`)) {
@@ -24,7 +26,6 @@ export default function () {
                 moreButton.setAttribute("id", `${ComponentConstants.PAGING_LIST_MORE_BUTTON_ID}`);
 
                 PAGING_LIST.appendChild(moreButton);
-                moreButton.appendChild(moreButtonsLayer);
             }
             moreButtonsLayer.appendChild(createPageButton(i));
         } else {

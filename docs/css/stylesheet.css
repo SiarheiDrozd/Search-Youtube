@@ -181,6 +181,9 @@ ul {
 .more-buttons-layer {
     display: none;
     position: absolute;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     overflow: auto;
     top: 100px;
     left: 0;
@@ -191,8 +194,8 @@ ul {
     cursor: auto;
 }
 
-.visible {
-    display: block;
+.more-buttons-layer.visible {
+    display: flex;
 }
 
 .active-page {
@@ -222,4 +225,7 @@ ul {
     content: "";
     display: block;
     clear: both;
+}
+.visible {
+    display: block;
 }
