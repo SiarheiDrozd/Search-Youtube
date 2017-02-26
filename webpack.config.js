@@ -11,7 +11,7 @@ module.exports = {
     },
 
     output: {
-        path    : __dirname + "/production/script",
+        path    : __dirname + "/docs/script",
         filename: "index.js",
         library : "[name]",
     },
